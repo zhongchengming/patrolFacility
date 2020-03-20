@@ -1,6 +1,32 @@
 <!--index.wxml-->
-<view class="head" style="height: {{headHeight}}px">
+
+<view class="test" style="margin-top: {{offset}}px">
+   <view class="head">
+   </view>
+   <image class="head-img" src="../img/head-img.png" > 
+   </image>
 </view>
-<image class="head-img" src="../img/head-img.png" >
-</image>
+
+<scroll-view class="box" style="height: {{windowHeight}}px"  scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore" bindscroll="scroll" >
+<view class="content" style="height:{{contenth}}px">
+  <view class="content-head">
+     <view class="content-head-line"></view>
+     <label class="content-haad-title">巡检记录</label>
+     <view class="content-head-bt">查看更多
+         <label style="font-size:20px;line-height: 20px;">></label>
+     </view>
+  </view>
+  <view wx:for="{{dataList}}" class="content-cell"  >
+       <view class="content-cell-item1">
+          <image src="../img/ic_course_red.png" style="width:15px;height:15px"></image>
+          <label class="item-label">{{item.workerName}}</label>
+          <label class="item-label-right">{{item.type}}</label>
+       </view>
+       <view class="content-cell-item2">检查日期 ：{{item.checkDate}}</view>
+       <view class="content-cell-item2">检人： {{item.checkName}}</view>
+       <view class="content-cell-item2">异常项数： {{item.warn}}</view>
+  </view>
+</view>
+ </scroll-view>
+
 

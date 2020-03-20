@@ -1,5 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "首页",
-  "navigationBarBackgroundColor": "#00b4af"
+  "navigationBarBackgroundColor": "#00b4af",
+  "backgroundColor": "#00b4af",
+  "disableScroll": true
 }

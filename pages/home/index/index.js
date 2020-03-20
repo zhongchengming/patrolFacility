@@ -5,14 +5,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    headHeight:90
+    headeight:90,
+    offset:0,
+    dataList:[],
+    windowHeight:0,
+    contenth:0
+  },
+  scroll: function (ev) {
+    let offset = 0;
+    if (ev.detail.scrollTop < 0) {
+      offset = ev.detail.scrollTop;
+    } else {
+      offset = 0;
+    }
+    offset = - ev.detail.scrollTop;
+    console.log(- ev.detail.scrollTop)
+    this.setData({
+      offset: offset
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let map = {"workerName":"后纺一期车间","checkDate":"2020-03-20","checkName":"李班长","warn":"1","type":"甲班-白班"}
+    let map2 = { "workerName": "后纺一期车K间", "checkDate": "2020-02-26", "checkName": "黄班长", "warn": "5", "type": "已班-早班" }
+    let newDataList = [];
+    newDataList.push(map);
+    newDataList.push(map2);
+    newDataList.push(map);
+    newDataList.push(map2);
+    this.setData({
+      dataList: newDataList
+    })
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        let h = res.windowHeight-120
+        that.setData({
+          windowHeight: res.windowHeight,
+          contenth:h
+        })
+      }
+    });
+  
   },
 
   /**
@@ -63,15 +100,4 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  onPageScroll: function (ev) {
-
-     //Math.max 数组中返回最大值
-    let offset = Math.abs(ev.scrollTop)+90;
-    console.log("前的="+Math.abs(offset))
-    this.setData({
-      headHeight: offset
-    });
-    console.log("计算后的="+Math.abs(headHeight))
-  }
 })
