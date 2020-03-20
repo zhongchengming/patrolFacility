@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/dealWith/dwIndex/dwIndex",
+    "pages/statistics/index/index",
+    "pages/mine/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle：": "white"
+  },
+  "tabBar": {
+    "color": "#cadede",
+    "selectedColor": "#00b4af",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "巡检",
+        "iconPath": "./image/ic_course_grey.png",
+        "selectedIconPath": "./image/ic_course_red.png"
+      },
+      {
+        "pagePath": "pages/dealWith/dwIndex/dwIndex",
+        "text": "待办",
+        "iconPath": "./image/ic_recommend_grey.png",
+        "selectedIconPath": "./image/ic_recommend_red.png"
+      },
+      {
+        "pagePath": "pages/statistics/index/index",
+        "text": "统计",
+        "iconPath": "./image/ic_shop_grey.png",
+        "selectedIconPath": "./image/ic_shop_red.png"
+      },
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "我的",
+        "iconPath": "./image/ic_mine_grey.png",
+        "selectedIconPath": "./image/ic_mine_red.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap70.json"
+}

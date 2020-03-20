@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="head" style="height: {{headHeight}}px">
+</view>
+<image class="head-img" src="../img/head-img.png" >
+</image>
+

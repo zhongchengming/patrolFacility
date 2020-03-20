@@ -1,0 +1,26 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head{
+  width: 100%;
+
+  background-color: #00b4af;
+  margin-top: 0px;
+   position: absolute;
+}
+.head-img{
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  height: 120px;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  /* background-color: red; */
+  /* border-color: #00b4af */
+
+}
