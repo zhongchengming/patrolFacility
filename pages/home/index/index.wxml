@@ -1,13 +1,9 @@
 <!--index.wxml-->
-
-<view class="test" style="margin-top: {{offset}}px">
-   <view class="head">
+<scroll-view class="box" style="height: {{windowHeight}}px"  scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore" bindscroll="scroll" >
+     <view class="head">
    </view>
    <image class="head-img" src="../img/head-img.png" > 
-   </image>
-</view>
-
-<scroll-view class="box" style="height: {{windowHeight}}px"  scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore" bindscroll="scroll" >
+</image>
 <view class="content" style="height:{{contenth}}px">
   <view class="content-head">
      <view class="content-head-line"></view>
@@ -28,5 +24,8 @@
   </view>
 </view>
  </scroll-view>
+ <view class="add">
+ <label class="add-label">+</label>
+ </view>
 
 

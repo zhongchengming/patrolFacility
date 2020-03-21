@@ -111,3 +111,30 @@ page ::-webkit-scrollbar {
     height: 0;
     color: transparent;
   }
+  .add{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #00b4af;
+    z-index: 0;
+    bottom: 100px;
+    right: 10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+  }
+  .add-label{
+    font-size: 50px;
+    color: white;
+    height: 40px;
+    line-height: 50px;
+   
+  }
+  .box{
+  
+  }

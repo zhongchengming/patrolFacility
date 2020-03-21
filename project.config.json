@@ -17,7 +17,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
 	"appid": "wx6ce70cd981de5814",
-	"projectname": "miniprogram-3",
+	"projectname": "patrolFacility",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -9,20 +9,21 @@ Page({
     offset:0,
     dataList:[],
     windowHeight:0,
-    contenth:0
+    contenth:0,
+    isScroll:""
   },
   scroll: function (ev) {
-    let offset = 0;
-    if (ev.detail.scrollTop < 0) {
-      offset = ev.detail.scrollTop;
-    } else {
-      offset = 0;
-    }
-    offset = - ev.detail.scrollTop;
-    console.log(- ev.detail.scrollTop)
-    this.setData({
-      offset: offset
-    })
+    // let offset = 0;
+    // if (ev.detail.scrollTop > 0) {
+    //   offset = - ev.detail.scrollTop-10;
+    // } else {
+    //   offset = 0;
+    // }
+    // let newh = this.data.contenth;
+    // newh += Math.abs(offset)
+    // this.setData({
+    //   offset: offset,
+    // })
   },
 
   /**
@@ -42,14 +43,13 @@ Page({
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
-        let h = res.windowHeight-120
+        let h = res.windowHeight-150
         that.setData({
           windowHeight: res.windowHeight,
           contenth:h
         })
       }
     });
-  
   },
 
   /**
