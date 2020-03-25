@@ -1,13 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view wx:for="{{dataList}}" class="data-list">
+  <view class="content-cell" style="height:{{item.dayCellHeiht}}px">
+       <view class="content-cell-left">
+          <label class="cell-left-day">{{item.day}}</label>
+          <label class="cell-left-week">周五</label>
+          <view class="cell-left-yuan"></view>
+           <view class="cell-left-line" style="height:{{item.dayCellHeiht-69}}px"></view>
+       </view>
+       <view wx:for="{{item.dayList}}" class="content-cell-right">
+          <view class="content-cell-item1">
+              <image src="../../img/ic_course_red.png" style="width:15px;height:15px"></image>
+                   <label class="item-label">{{item.workerName}}</label>
+                  <label class="item-label-right" style="color:{{item.type=='进行中'?'red':'#00b4af'}}">{{item.type}}</label>
+          </view>
+          <view class="content-cell-item2">检查日期 ：{{item.checkDate}}</view>
+          <view class="content-cell-item2">检人： {{item.checkName}}</view>
+       </view>
+    </view>
 </view>

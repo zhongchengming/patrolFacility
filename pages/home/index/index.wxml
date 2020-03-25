@@ -24,7 +24,7 @@
   </view>
 </view>
  </scroll-view>
- <view class="add">
+ <view class="add" bindtap="btnclick">
  <label class="add-label">+</label>
  </view>
 

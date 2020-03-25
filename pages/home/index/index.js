@@ -25,6 +25,11 @@ Page({
     //   offset: offset,
     // })
   },
+  btnclick: function () {
+    wx.navigateTo({
+      url: '../addInspection/addInspection'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -3,7 +3,9 @@
     "pages/home/index/index",
     "pages/dealWith/dwIndex/dwIndex",
     "pages/statistics/index/index",
-    "pages/mine/index/index"
+    "pages/mine/index/index",
+    "pages/home/addInspection/addInspection",
+    "pages/home/inspectionDetail/inspectionDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,7 +36,7 @@
         "selectedIconPath": "./image/ic_shop_red.png"
       },
       {
-        "pagePath": "pages/home/index/index",
+        "pagePath": "pages/mine/index/index",
         "text": "我的",
         "iconPath": "./image/ic_mine_grey.png",
         "selectedIconPath": "./image/ic_mine_red.png"

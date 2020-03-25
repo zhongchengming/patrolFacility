@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "待办事项",
-  "navigationBarBackgroundColor": "#00b4af"
+  "navigationBarBackgroundColor": "#00b4af",
+  "backgroundColor": "#F6FAFA"
 }
