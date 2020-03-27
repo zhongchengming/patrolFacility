@@ -1,0 +1,86 @@
+<!--pages/home/addInspection/addInspection.wxml-->
+<view class="cell">
+   <view class="cell-content">
+     <view class="view-text">当前车间</view> 
+     <view class="view-input">  
+          <input  bindtap="currentCarHoser" placeholder="请选择当前车间"/>
+     </view> 
+   </view>
+   <view class="line"></view>
+</view>
+<view class="cell">
+   <view class="cell-content">
+     <view class="view-text">班别</view> 
+     <view class="view-input">  
+          <input placeholder="请输入班别"/>
+     </view> 
+   </view>
+   <view class="line"></view>
+</view>
+<view class="cell">
+   <view class="cell-content">
+     <view class="view-text">巡检人</view> 
+     <view class="view-input">  
+          <input placeholder="李丽"/>
+     </view> 
+   </view>
+   <view class="line"></view>
+</view>
+<view class="inspection-content">
+   <view style="font-size:17px;margin-left:15px;height:50px;line-height:50px">
+      检查项
+   </view>
+   <view class="content">
+        <view class="content-item" bindtap="btnclick1">
+           <view class="item0">
+              <label class="item0-1">!</label>
+              <view class="item0-2"></view>
+          </view>
+          <view class="item1">
+               <image class="item1-1"></image>
+          </view>
+            <view style="width:100%; text-align: center" >
+               <label class="item2-1">设备异常</label>
+          </view>
+        </view>
+
+        <view class="content-item"  bindtap="btnclick2">
+           <view class="item0">
+              <label class="item0-1">!</label>
+              <view class="item0-2"></view>
+          </view>
+          <view class="item1">
+               <image class="item1-1"></image>
+          </view>
+            <view style="width:100%; text-align: center" >
+               <label class="item2-1">原辅料异常</label>
+          </view>
+        </view>  
+
+        <view class="content-item"  bindtap="btnclick3">
+           <view class="item0">
+              <label class="item0-1">!</label>
+              <view class="item0-2"></view>
+          </view>
+          <view class="item1">
+               <image class="item1-1"></image>
+          </view>
+            <view style="width:100%; text-align: center" >
+               <label class="item2-1">质量类异常</label>
+          </view>
+        </view>
+
+        <view class="content-item" bindtap="btnclick4" >
+            <view class="item0">
+              <label class="item0-1">!</label>
+              <view class="item0-2"></view>
+            </view>
+            <view class="item1">
+               <image class="item1-1"></image>
+            </view>
+            <view style="width:100%; text-align: center" >
+               <label class="item2-1">其他异常</label>
+          </view>
+        </view > 
+   </view>
+</view>

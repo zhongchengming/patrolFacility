@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/loginAndRegister/login/login",
     "pages/home/index/index",
     "pages/dealWith/dwIndex/dwIndex",
     "pages/statistics/index/index",
     "pages/mine/index/index",
     "pages/home/addInspection/addInspection",
     "pages/home/inspectionDetail/inspectionDetail"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
