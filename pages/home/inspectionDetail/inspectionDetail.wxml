@@ -1,0 +1,60 @@
+   <view style="font-size:17px;padding-left:15px;height:50px;line-height:50px;background-color:white;margin-top: 1px">
+      检查项目
+   </view>
+
+   <view class="checkTitle">
+           检查内容：
+   </view>
+   <view wx:for="{{checkDataList}}">
+      <view class="content-cell" >
+          <view class="checkContent">
+              {{item.title}}
+          </view>
+          <view style="width:100%;background-color:red;height:50px">
+             <view class="selectLeft"></view>
+             <view class="selectRight">
+               <!-- item.select 为0是检查异常  是选中-->
+                <view class="yes" style="background-color:{{item.slectType==0?'#00b4af':'white'}};color:{{item.slectType==0?'white':'black'}}; border-color:{{item.slectType==0?'white':'rgb(231, 231, 231)'}}" bindtap="btnclick1" data-myindex="{{index}}">是</view>
+                
+                <view class="no" bindtap="btnclick2" data-myindex="{{index}}" style="background-color:{{item.slectType!=0?'#00b4af':'white'}};color:{{item.slectType!=0?'white':'black'}};border-color:{{item.slectType!=0?'white':'rgb(231, 231, 231)'}}">否</view>
+             </view>
+          </view>
+        <view class="desc" style="display:{{item.slectType==0?'':'none'}}">
+            <view style=" text-align: right">
+              <label class="descTitle">异常详情描述</label>
+            </view>
+            <view class="desc-cell">
+               <view class="view-text">异常位置</view> 
+               <view class="view-input">  
+                 <input placeholder="请填写"/>
+               </view>
+            </view>
+            <view class="desc-cell">
+               <view class="view-text">异常原因</view> 
+               <view class="view-input">  
+                 <input placeholder="请填写"/>
+              </view>
+            </view>
+            <view class="desc-cell">
+               <view class="view-text">解决状态</view> 
+               <view class="select-left" style="margin-left:10px">  
+                  <view class="select-Box" style="background-color:{{colorList[0].color}};color:{{colorList[0].textColor}}" bindtap="solveState" data-index="0">
+                     已处理
+                  </view>
+                  <view class="select-Box"  style="background-color:{{colorList[1].color}};color:{{colorList[1].textColor}}" bindtap="solveState" data-index="1">
+                     待处理
+                  </view>
+                  <view class="select-Box"  style="background-color:{{colorList[2].color}};color:{{colorList[2].textColor}}" bindtap="solveState" data-index="2">
+                     已处理
+                  </view>
+              </view>
+           </view>
+        </view>
+      </view>
+   </view>
+<view class="footer">
+  <view class="commit">
+       提交
+  </view>
+</view>
+ 
