@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    arraycj: ['美国', '中国', '巴西', '日本'],
+    classType: ['甲班', '已班', '丙班', '日本'],
+    carHouse:"",
+    classHouse:""
   },
   btnclick1: function () {
     wx.navigateTo({
@@ -29,6 +32,17 @@ Page({
   },
   currentCarHoser:function(){
     console.log("asa");
+  },
+  // 车间选择
+  bindPickerChange: function (e) {
+    this.setData({
+      carHouse: e.detail.value
+    })
+  },
+  classhose:function(e){
+    this.setData({
+      classHouse: e.detail.value
+    })
   },
 
   /**

@@ -3,7 +3,11 @@
    <view class="cell-content">
      <view class="view-text">当前车间</view> 
      <view class="view-input">  
-          <input  bindtap="currentCarHoser" placeholder="请选择当前车间"/>
+      <picker bindchange="bindPickerChange" value="{{carHouse}}" range="{{arraycj}}">
+           <view class="picker">
+              <input  disabled="true" value="{{carHouse}}" bindtap="currentCarHoser" placeholder="请选择当前车间"/>
+           </view>
+        </picker>
      </view> 
    </view>
    <view class="line"></view>
@@ -12,14 +16,18 @@
    <view class="cell-content">
      <view class="view-text">班别</view> 
      <view class="view-input">  
-          <input placeholder="请输入班别"/>
+         <picker bindchange="classhose" value="{{classHouse}}" range="{{classType}}">
+           <view class="picker">
+              <input  disabled="true" value="{{classHouse}}" bindtap="classhose" placeholder="请选择班别"/>
+           </view>
+           </picker>
      </view> 
    </view>
    <view class="line"></view>
 </view>
 <view class="cell">
    <view class="cell-content">
-     <view class="view-text">巡检人</view> 
+     <view class="view-text">请填写</view> 
      <view class="view-input">  
           <input placeholder="李丽"/>
      </view> 
