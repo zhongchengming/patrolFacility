@@ -4,6 +4,7 @@
    </view>
    <image class="head-img" src="../img/head-img.png" > 
 </image>
+<loading  hidden="{{hiddenLoading}}">正在加载中...</loading>
 <view class="content" style="height:{{contenth}}px">
   <view class="content-head">
      <view class="content-head-line"></view>
@@ -15,11 +16,11 @@
   <view wx:for="{{dataList}}" class="content-cell"  >
        <view class="content-cell-item1">
           <image src="../img/ic_course_red.png" style="width:15px;height:15px"></image>
-          <label class="item-label">{{item.workerName}}</label>
-          <label class="item-label-right">{{item.type}}</label>
+          <label class="item-label">{{item.workshop}}</label>
+          <label class="item-label-right">{{item.inspectionClass}}</label>
        </view>
-       <view class="content-cell-item2">检查日期 ：{{item.checkDate}}</view>
-       <view class="content-cell-item2">检人： {{item.checkName}}</view>
+       <view class="content-cell-item2">检查日期 ：{{item.createdTime}}</view>
+       <view class="content-cell-item2">检人： {{item.personnel}}</view>
        <view class="content-cell-item2">异常项数： {{item.warn}}</view>
   </view>
 </view>

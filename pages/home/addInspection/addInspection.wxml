@@ -3,9 +3,9 @@
    <view class="cell-content">
      <view class="view-text">当前车间</view> 
      <view class="view-input">  
-      <picker bindchange="bindPickerChange" value="{{carHouse}}" range="{{arraycj}}">
+      <picker bindchange="bindPickerChange" value="{{cjList[cjIndex].value}}" range-key="name"  disabled="{{disabled}}" range="{{cjList}}">
            <view class="picker">
-              <input  disabled="true" value="{{carHouse}}" bindtap="currentCarHoser" placeholder="请选择当前车间"/>
+              <input  disabled="true"  value="{{cjList[cjIndex].name}}" placeholder="请选择当前车间"/>
            </view>
         </picker>
      </view> 
@@ -16,9 +16,9 @@
    <view class="cell-content">
      <view class="view-text">班别</view> 
      <view class="view-input">  
-         <picker bindchange="classhose" value="{{classHouse}}" range="{{classType}}">
+         <picker bindchange="classhose"   disabled="{{disabled}}" value="{{bbList[bbIndex].value}}" range-key="name" range="{{bbList}}">
            <view class="picker">
-              <input  disabled="true" value="{{classHouse}}" bindtap="classhose" placeholder="请选择班别"/>
+              <input  disabled="true" value="{{bbList[bbIndex].name}}" bindtap="classhose" placeholder="请选择班别"/>
            </view>
            </picker>
      </view> 
@@ -29,7 +29,7 @@
    <view class="cell-content">
      <view class="view-text">请填写</view> 
      <view class="view-input">  
-          <input placeholder="李丽"/>
+          <input bindinput="getName" disabled="{{disabled}}"  placeholder="李丽"/>
      </view> 
    </view>
    <view class="line"></view>

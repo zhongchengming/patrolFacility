@@ -7,7 +7,6 @@
     "pages/mine/index/index",
     "pages/home/addInspection/addInspection",
     "pages/home/inspectionDetail/inspectionDetail"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +44,5 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap70.json"
+  "sitemapLocation": "sitemap16.json"
 }
